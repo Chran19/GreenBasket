@@ -1,146 +1,72 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-# === Node ===
+# ==== Dependencies ====
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-dist/
-build/
-.out/
-.next/
 
-# === Next.js ===
+# ==== Next.js ====
 .next/
 out/
 .vercel/
-*.local
-
-# === Environment Variables ===
-.env
-.env.local
-env.example
-.env.development.local
-.env.test.local
-.env.production.local
-
-# === Supabase ===
-supabase/.branches
-supabase/.temp
-supabase/.config
-
-# === OS Files ===
-.DS_Store
-Thumbs.db
-
-# === Logs ===
-logs
-*.log
-logs/*.log
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# === IDE ===
-.vscode/
-.idea/
-
-# === PDF & Upload Temp Files ===
-*.pdf
-invoices/
-generated/
-temp/
-
-# === Cache ===
-.cache/
 .next/cache/
 
-# === Lock / Misc ===
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
+# ==== Build / Production ====
+dist/
+build/
+coverage/
 
-# === At Runtime only ===
+# ==== Runtime Uploads ====
 uploads/
 temp/
-# ---- Node / Next.js ----
-node_modules
-.next
-out
-dist
-build
-coverage
 
-# ---- Environment / Secrets ----
-.env
-.env.*
-!.env.example
-.env.local
-
-# ---- Logs ----
+# ==== Logs ====
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-logs
-*.log
 
-# ---- OS / Editor ----
+# ==== Environment / Secrets (ALL IGNORED) ====
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+env.example
+
+# ==== OS Files ====
 .DS_Store
 Thumbs.db
-.vscode
-.idea
 
-# ---- Package Managers ----
+# ==== IDE ====
+.vscode/
+.idea/
+
+# ==== Lock Files ====
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# ---- Fonts / Assets (keep only folder, ignore font binaries) ----
+# ==== Fonts (keep folder, ignore actual binaries) ====
 /app/fonts/*
 !/app/fonts/.keep
 
-# ---- Server build and debug files ----
+# ==== PDF & Invoice Files ====
+*.pdf
+invoice_*.pdf
+invoice_*
+invoices/
+generated/
+
+# ==== Server debug files ====
 server.js
 server-debug.js
 server-minimal.js
 
-# ---- Generated PDF / Invoice files ----
-invoice_*.pdf
-invoice_*
-
-# ---- Documentation you don't want to push ----
+# ==== Documentation to ignore ====
 SETUP_GUIDE.md
 INTEGRATION_GUIDE.md
 
-# ---- Config files you listed ----
+# ==== Config files you listed ====
 components.json
 next-env.d.ts
 next.config.mjs
@@ -153,7 +79,7 @@ TS
 J5
 JS
 
-# ---- Temporary / Misc ----
+# ==== Temporary / Misc ====
 *.tmp
 *.swp
 *.bak
